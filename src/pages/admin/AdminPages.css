@@ -1,0 +1,52 @@
+/* ===== Admin Pages Styles ===== */
+.admin-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: var(--space-4);
+}
+.admin-menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--space-4);
+}
+.admin-menu-card {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  padding: var(--space-6);
+  cursor: pointer;
+  transition: var(--transition);
+}
+.admin-menu-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+.admin-menu-icon {
+  width: 52px; height: 52px;
+  border-radius: var(--radius-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  flex-shrink: 0;
+}
+.admin-menu-card h3 {
+  font-size: var(--font-size-base);
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+.modal-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+.spinning {
+  animation: spin 1s linear infinite;
+}
+@media (max-width: 768px) {
+  .admin-stats-grid { grid-template-columns: repeat(2, 1fr); }
+  .admin-menu-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 480px) {
+  .admin-stats-grid { grid-template-columns: 1fr; }
+}

@@ -1,0 +1,79 @@
+.pet-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-6);
+}
+
+@media (min-width: 540px) {
+  .pet-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (min-width: 900px) {
+  .pet-grid { grid-template-columns: repeat(3, 1fr); }
+}
+@media (min-width: 1200px) {
+  .pet-grid { grid-template-columns: repeat(4, 1fr); }
+}
+
+/* Skeleton */
+.pet-card-skeleton {
+  overflow: hidden;
+}
+
+.pet-skeleton-image {
+  aspect-ratio: 4/3;
+  width: 100%;
+}
+
+.pet-skeleton-body {
+  padding: var(--space-4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.pet-skeleton-species {
+  width: 60px;
+  height: 14px;
+}
+
+.pet-skeleton-name {
+  width: 80%;
+  height: 20px;
+}
+
+.pet-skeleton-detail {
+  width: 50%;
+  height: 14px;
+}
+
+.pet-skeleton-btn {
+  width: 100%;
+  height: 36px;
+  margin-top: var(--space-2);
+}
+
+/* Empty State */
+.pet-grid-empty {
+  text-align: center;
+  padding: var(--space-16) var(--space-4);
+  color: var(--color-text-secondary);
+}
+
+.pet-grid-empty-icon {
+  font-size: 4rem;
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-4);
+  animation: float 3s ease-in-out infinite;
+}
+
+.pet-grid-empty h3 {
+  font-size: var(--font-size-xl);
+  color: var(--color-text);
+  margin-bottom: var(--space-2);
+}
+
+.pet-grid-empty p {
+  font-size: var(--font-size-sm);
+  max-width: 400px;
+  margin: 0 auto;
+}
