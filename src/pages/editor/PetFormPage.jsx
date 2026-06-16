@@ -67,7 +67,7 @@ export default function PetFormPage() {
     const fd = new FormData()
     fd.append('image', file)
     try {
-      const res = await API.post('/pets/upload', fd, { headers: { 'Content-Type': 'multipart/form-data' } })
+      const res = await API.post('/upload/image', fd, { headers: { 'Content-Type': 'multipart/form-data' } })
       if (res.data.success) {
         const url = res.data.data?.url || res.data.data
         setFormData(prev => ({ ...prev, image_url: url }))
